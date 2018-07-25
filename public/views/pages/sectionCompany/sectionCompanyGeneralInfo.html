@@ -1,0 +1,27 @@
+
+<h3>{{companySelected.name}} 을 소개합니다</h3>
+{{companySelected.description}}
+
+<br />
+<h3 style="margin-top: 40px;">본사 (Headquarter)</h3>
+<p>
+  {{companySelected.city}}, {{companySelected.state}} {{companySelected.country}}
+</p>
+
+<br />
+<h3 style="">체용 웹사이트 (Career Page)</h3>
+<p>
+  <a ng-href="{{companySelected.url_company}}" target="_blank">
+    {{companySelected.url_company}}
+  </a>
+</p>
+
+
+
+<h3>Instagram 사진 &#35;{{cafeSelected.tagInsta}}</h3>
+<br />
+<p>
+<div class="col-md-3" ng-repeat="pic in listInstaData track by $index">
+      <img ng-src="{{pic.thumbnail_url}}"  ng-click="openPic('lg',pic)" style="width: 150px; height: 150px;"/>
+ </div>
+</p>

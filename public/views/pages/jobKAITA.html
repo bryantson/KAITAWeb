@@ -1,0 +1,100 @@
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+	  <div class="modal-header">
+	    <span class="close">&times;</span>
+	    <h2>{{selectedJob.position}}, {{selectedJob.company}}</h2>
+	  </div>
+	  <div class="modal-body">
+			 <p>
+
+				 <table class="eventTable">
+
+				       <tr style="border: 1px solid black;">
+				         <td>일자리 (Job)</td>
+				         <td>{{selectedJob.position}}, {{selectedJob.company}}</td>
+				       </tr>
+							 <tr style="border: 1px solid black;">
+							 <td>종류 (Job Type)</td>
+							 <td>{{selectedJob.type}}</td>
+						 </tr>
+							<tr style="border: 1px solid black;">
+								 <td>지역 (Location)</td>
+								 <td>{{selectedJob.city}}, {{selectedJob.state}} {{selectedJob.country}}</td>
+							 </tr>
+							<tr style="border: 1px solid black;">
+							 <td>타겟 (Job Target)</td>
+							 <td>{{selectedJob.target}}</td>
+						 </tr>
+						 <tr style="border: 1px solid black;">
+ 						 <td>웹사이트 (Website)</td>
+ 						 <td>
+ 							<a ng-href="{{selectedJob.url_job}}" target="_blank">Apply Here (이곳으로 지원하세요!) </a>
+ 						 </td>
+ 					 </tr>
+						 <tr style="border: 1px solid black;">
+							<td>제공자 (Job Referrer)</td>
+							<td>
+									{{selectedJob.referrer}}
+							</td>
+						</tr>
+				   </table>
+					 <p style="margin-top: 10px;">
+						 <h3>설명 (Description)</h3>
+							 {{selectedJob.description}}
+					 </p>
+			 </p>
+
+		<!--
+	  <div class="modal-footer">
+	    <h3>Modal Footer</h3>
+	  </div>
+	-->
+		</div>
+	</div>
+</div>
+
+<article id="main">
+
+	<header class="special container">
+		<span class="icon fa-suitcase"></span>
+		<h2>JOBS of <strong>KAITA</strong></h2>
+		<p>KAITA 를 통해서 여러가지 IT 일자리를 찾아볼수 있는곳입니다</p>
+	</header>
+
+	<!-- One -->
+		<section class="wrapper style4 container">
+
+			<!-- Content -->
+				<div class="content">
+					<section>
+						<header>
+							<h3>현재 오픈 되어 있는 일자리 입니다</h3>
+						</header>
+
+						<table class="eventTable">
+						  <thead>
+						    <tr>
+						      <th>#</th>
+						      <th>일자리 (Job)</th>
+									<th>종류 (Job Type)</th>
+									<th>지역 (Location)</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr ng-repeat="job in jobs track by $index"  ng-click="openModalEvent(job)">
+						      <td>{{$index}}</td>
+									<td>{{job.position}}, {{job.company}} </td>
+									<td>{{job.type}} </td>
+									<td>{{job.city}}, {{job.state}} {{job.country}}</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</section>
+				</div>
+
+		</section>
+
+</article>

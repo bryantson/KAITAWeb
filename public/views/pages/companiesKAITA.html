@@ -1,0 +1,181 @@
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+	  <div class="modal-header">
+	    <span class="close">&times;</span>
+	    <h2>{{selectedMember.first_name}} {{selectedMember.last_name}} Profile</h2>
+	  </div>
+	  <div class="modal-body">
+			<article class="modalMembers">
+			  <p>
+					<img src="images/profile_default.jpg" style="width: 400px; height: 400px;" />
+				 </p>
+
+			 <p>
+				 <table style="border: 1px solid black; margin-top: 20px; margin-bottom: 10px; float: right;">
+
+							 <tr style="border: 1px solid black;">
+								 <td style="width: 40%;">
+									 Name (이름)
+								</td>
+								 <td style="width: 60%;">{{selectedMember.first_name}} {{selectedMember.last_name}}</td>
+							 </tr>
+								<tr style="border: 1px solid black;">
+								 <td>
+									 Profession(직업)
+									</td>
+								 <td>{{selectedMember.profession}}</td>
+							 </tr>
+							 <tr style="border: 1px solid black;">
+								<td>
+									Company (직장)
+								 </td>
+								<td>{{selectedMember.company}}</td>
+							</tr>
+							<tr style="border: 1px solid black;">
+							 <td>
+								 Alma Matter (학교)
+								</td>
+							 <td>{{selectedMember.school}}</td>
+						 </tr>
+							 <tr style="border: 1px solid black;">
+								 <td>
+									 Location (지역)
+								 </td>
+								 <td>{{selectedMember.city}}, {{selectedMember.state}} {{selectedMember.country}}</td>
+							 </tr>
+							 <tr style="border: 1px solid black;">
+								 <td>
+									 LinkedIn
+								 </td>
+								 <td>
+									 <a ng-href="http://www.{{selectedMember.url_linkedin}}" target="_blank">
+										<i class="fa fa-linkedin-square" aria-hidden="true"> LinkedIn Profile</i>
+									</a>
+								 </td>
+							 </tr>
+
+							 <tr style="border: 1px solid black;">
+								 <td>
+									 Skills (능력)
+								</td>
+								 <td>
+									 	<span ng-repeat="skill in skillsMember">
+											  <span class="label label-primary">{{skill}}</span>
+										</span>
+								 </td>
+							 </tr>
+					 </table>
+
+
+			 </p>
+			</article>
+
+		<!--
+	  <div class="modal-footer">
+	    <h3>Modal Footer</h3>
+	  </div>
+	-->
+		</div>
+	</div>
+</div>
+<!-- Main -->
+	<article id="main">
+
+		<header class="special container">
+			<span class="icon fa-building"></span>
+			<h2>COMPANIES of <strong>KAITA</strong></h2>
+			<p>기업을 알아보고 지원해 볼수 있는 곳입니다</p>
+		</header>
+
+		<!-- One -->
+			<section class="wrapper style4 container">
+				
+			<div class="row 150%">
+					<div class="12u 12u(narrower)">
+						<div class="row">
+							<input type="text" style="width: 30%; margin-right: 10px;" />
+							<a href="#" class="button">Search by Name (이름)</a>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="row 150%">
+					<div class="12u 12u(narrower)">
+						<div class="row">
+								<div class="4u 12u(narrower)" ng-repeat="company in companies | orderBy: 'name'">
+									<div class="card" ng-click="go2CompanySelection(company.id)">
+										<img ng-src="{{getCompanyImgURL(company.name)}}" style="width: 100%;" alt="Avatar">
+										<div>
+											<h4 style="text-align: center; font-weight: bold;">
+												{{company.name}}
+											</h4>
+										</div>
+									</div>
+								</div>
+
+
+						</div>
+
+					</div>
+				</div>
+
+					<!-- START Of 4u 12 u  -->
+					<!--
+					<div class="4u 12u(narrower)">
+					-->
+						<!-- Sidebar -->
+						<!--
+							<div class="sidebar">
+								<section>
+									<header>
+										<h3>멤버 찾기</h3>
+									</header>
+									<p>
+										<input type="text" />
+									</p>
+										<ul class="buttons">
+											<li>
+												<a href="#" class="button">Search by Name (이름)</a>
+											</li>
+										</ul>
+									</footer>
+								</section>
+
+								<section>
+									<header>
+										<h3>Location (지역)</h3>
+									</header>
+									<p>
+										<select>
+										  <option ng-repeat="state in states" ng-value="{{state.value}}">{{state.name}}</option>
+										</select>
+									</p>
+									<header>
+										<h3>Skills (능력)</h3>
+									</header>
+									<p>
+										<span ng-repeat="skill in skills">
+											<input type="checkbox" value="{{skill.value}}" /> {{skill.name}}
+										</span>
+									</p>
+									<footer>
+										<ul class="buttons">
+											<li><a href="#" class="button">Search by Filter (선택별)</a></li>
+										</ul>
+									</footer>
+								</section>
+							</div>
+						-->
+							<!-- END OF Sidebar -->
+					<!--
+					</div>
+				-->
+					<!-- END Of 4u 12 u  -->
+				</div>
+			</section>
+
+	</article>
