@@ -1,6 +1,6 @@
 # KAITA Website
 
-This is the source 
+This is the source of KAITA website. Please follow the process below to contribute to the modification of project.
 
 # Cloning Process
 
@@ -32,7 +32,6 @@ Then, when you are ready to merge, make a pull request to development branch
 
 ## Running Locally
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
 
 ```sh
 $ git clone https://github.com/bryantson/KAITAWeb.git # or clone your own fork
