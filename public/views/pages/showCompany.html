@@ -1,0 +1,58 @@
+<!-- Main -->
+<article id="main">
+
+		<header class="special container">
+			<span class="icon fa-building"></span>
+			<h2>COMPANIES of <strong>KAITA</strong></h2>
+			<p>기업을 알아보고 지원해 볼수 있는 곳입니다</p>
+		</header>
+
+        <section class="wrapper style4 container">
+                <div class="row 150%">
+                        <h1></h1>
+                        <!-- START of Container -->
+                        <div class="container">
+                            <div ng-include="templateTitle"></div>
+                            <div ng-include="templateModalPic"></div>
+                            <div ng-include="templateModalRatingDetail"></div>
+                    
+                            <!-- START of row 150% -->
+                            <div class="row 150%">
+                                <!-- START of r8u 12u$(medium) -->
+                                <div class="8u 12u$(medium)">
+                                    <!-- START of Content -->
+                                        <section id="content">
+                                            <div ng-include="templateSectionGeneralInfo"></div>
+                                            <!--
+                                        <div ng-include="templateCommentHeader" class="col-md-12" ></div>
+                                            <div ng-include="templateCommentCreate" ng-show="user"  class="col-md-12" style="margin-top: 10px; border: 2px dotted #9933ff; border-radius: 10px;"></div>
+                                            <div ng-include="templateCommentContent" class="col-md-12"></div>
+                                        -->
+                                    </section>
+                                    <!-- END of content -->
+                                </div>
+                                <!-- END of r8u 12u$(medium) -->
+                                <!-- START of 4u$ 12u$(medium -->
+                                <div class="4u$ 12u$(medium)">
+                                    <!-- START of Sidebar -->
+                                        <section id="sidebar">
+                                            <!--<div ng-include="templateSectionContactInfo"></div> -->
+                                            <hr />
+                                            <!-- START of Google Map -->
+                                        <!-- <iframe width="400" height="350" frameborder="0" style="border:0" ng-src="{{ cafeSelected | googleMapAPILink}}" allowfullscreen></iframe> -->
+                                            <!-- END of Google Map -->
+                                            <div ng-include="templateSectionDallowahRating"></div>
+                                        </section>
+                                    <!-- END of Sidebar -->
+                                </div>
+                                <!-- END of 4u$ 12u$(medium -->
+                            </div>
+                            <!-- END of row 150% -->
+                        </div>
+                        <!-- END of Container -->
+
+
+                </div>
+            </section>
+    </article>
+    

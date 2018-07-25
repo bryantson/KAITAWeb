@@ -1,0 +1,53 @@
+<section>
+  <h3 style="font-weight: bold;">
+    <i class="fa fa-map-marker"> 주소 (Address)</i>
+  </h3>
+  <p style="font-size: 20px;">
+    {{cafeSelected.address}} <br />{{cafeSelected.city}}, TX {{cafeSelected.zipcode}}
+  </p>
+  <h3>
+    <i class="fa fa-volume-control-phone"> 전화번호 (Phone Number)</i>
+  </h3>
+  <p style="font-size: 20px;">
+    <a href="{{cafeSelected.phoneNumber | phoneNumber2Call}}">
+      {{cafeSelected.phoneNumber | phoneNumber2Display}}
+    </a>
+  </p>
+  <h3 style="font-weight: bold;">
+    <i class="fa fa-globe"> 웹사이트 (Website)</i>
+  </h3>
+  <p style="font-size: 20px;">
+    <a ng-show="cafeSelected.website != undefined && cafeSelected.website.length > 0" href="http://{{cafeSelected.website}}" target="_blank">{{cafeSelected.website}}</a>
+    <span ng-hide="cafeSelected.website != undefined && cafeSelected.website.length > 0">웹사이트 없음</span>
+  </p>
+  <h3 style="font-weight: bold;">
+      <i class="fa fa-clock-o"> 시간 (Hours)</i>
+  </h3>
+  <p style="font-size: 20px;">
+    <table class="table table-hover">
+      <tr ng-repeat="time in cafeSelected.hours track by $index">
+        <td style="font-weight: bold;">{{listDayWeek[$index]}}</td>
+        <td>{{time | clockConversion}}</td>
+      </tr>
+    </table>
+  </p>
+  <h3 style="font-weight: bold;">
+    <i class="fa fa-flag"> 카페 스타일</i>
+  </h3>
+  <p style="font-size: 20px;">
+      <img class="" ng-src="{{getIconCountryImgURL(cafeSelected.typeCafe)}}" alt="" />
+      {{mapCafeTypes[cafeSelected.typeCafe].nameKorean}} 식
+  </p>
+  <h3 style="font-weight: bold;">
+    <i class="fa fa-cloud"> 카페 분위기</i>
+  </h3>
+  <p style="font-size: 20px;">
+      <span ng-repeat="(mood, isAvailable) in cafeSelected.cafeMoods track by $index">
+        <span ng-if="$index % 2 == 0">
+          <br />
+        </span>
+          <img class="" ng-show="isAvailable" ng-src="{{getIconEnvironmentMoodsImgURL(mood)}}" alt="" />
+           <span ng-show="isAvailable">{{mapEnvironmentMoods[mood].nameKorean}}</span>
+      </span>
+  </p>
+</section>

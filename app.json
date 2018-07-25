@@ -1,0 +1,8 @@
+{
+  "name": "KAITA Website",
+  "description": "KAITA website soruce codes",
+  "repository": "https://github.com/bryantson/KAITAWeb",
+  "logo": "",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}

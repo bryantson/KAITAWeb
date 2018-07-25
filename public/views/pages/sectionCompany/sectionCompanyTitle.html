@@ -1,0 +1,11 @@
+<button class="button" style="font-size: 16px;" type="button" ng-click="goBack()">
+  <i class="fa fa-undo" aria-hidden="true"> 돌아가기</i>
+</button>
+<header class="major">
+  <h1 style="text-align: center; font-size: 40px;">
+      {{companySelected.name}}
+  </h1>
+  <img class="image fit img-rounded" style="width: 100%;" ng-src="{{getCompanyBannerURL(companySelected.name)}}" alt="" />
+  <br />
+  <p style="color: #000000; font-size: 20px;"></p>
+</header>

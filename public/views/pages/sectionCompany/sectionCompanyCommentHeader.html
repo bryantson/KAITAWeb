@@ -1,0 +1,16 @@
+<h3> <i class="fa fa-2x fa-comments-o" aria-hidden="true"> 코멘트</i></h3>
+<div ng-hide="user">
+ <button class="btn btn-danger" ng-click="signIn('google')"><i class="fa fa-google" aria-hidden="true"> 구글로 로그인</i></button>
+ <button class="btn btn-primary" ng-click="signIn('facebook')"><i class="fa fa-facebook" aria-hidden="true"> 페북으로 로그인</i></button>
+</div>
+<div ng-show="user">
+ <div class="col-md-6">
+   <img ng-src="{{user.photoURL}}" width="50px;" height="50px;" />
+   {{user.displayName}} 으로 로그인 하셨습니다!
+ </div>
+ <div class="col-md-6">
+   <button class="btn btn-danger" style = "float: right;" ng-click="signOut()">
+     <i class="fa fa-lg fa-sign-out" aria-hidden="true"> 로그아웃 하기</i>
+   </button>
+ </div>
+</div>

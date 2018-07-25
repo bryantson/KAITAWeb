@@ -1,0 +1,62 @@
+<section>
+  <h1>달로와의 평가 </h1>
+  <p>
+      <i class="fa fa-star-o"></i> = 없음/비추
+      <br />
+      <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i> = 약함/기본
+      <br />
+      <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> = 추천/문제가 없음
+      <br />
+      <i class="fa fa-star-o"></i>	<i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i>  = 아주 뛰어남
+  </p>
+  <br />
+  <div ng-show="cafeSelected.ratingCoffee.description != 'NA'">
+    <p>
+      <i class="fa fa-2x fa-coffee" aria-hidden="true"> 커피맛 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </i> 	<i class="fa fa-2x fa-star-o" ng-repeat="score in getNumberToList(cafeSelected.ratingCoffee.score) track by $index">{{score}}</i>
+    </p>
+    <br />
+    <p>
+      <i class="fa fa-2x fa-glass" aria-hidden="true"> 음료 종류 &nbsp;&nbsp;: </i> 	<i class="fa fa-2x fa-star-o" ng-repeat="score in getNumberToList(cafeSelected.ratingVariety.score) track by $index">{{score}}</i>
+    </p>
+    <br />
+    <p>
+      <i class="fa fa-2x fa-wifi" aria-hidden="true"> 와이파이 &nbsp;&nbsp;&nbsp;: </i> 	<i class="fa fa-2x fa-star-o" ng-repeat="score in getNumberToList(cafeSelected.ratingWifi.score) track by $index">{{score}}</i>
+    </p>
+    <br />
+    <p>
+      <i class="fa fa-2x fa-comments-o" aria-hidden="true"> 수다장소 &nbsp;&nbsp;&nbsp;: </i>	<i class="fa fa-2x fa-star-o" ng-repeat="score in getNumberToList(cafeSelected.ratingConversation.score) track by $index">{{score}}</i>
+   </p>
+    <br />
+    <p>
+      <i class="fa fa-2x fa-plug" aria-hidden="true"> &nbsp;&nbsp;아울렛  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</i> 	<i class="fa fa-2x fa-star-o" ng-repeat="score in getNumberToList(cafeSelected.ratingOutlet.score) track by $index">{{score}}</i>
+    </p>
+    <br />
+    <p>
+      <i class="fa fa-2x fa-music" aria-hidden="true"> &nbsp;라이브뮤직 :</i> <i class="fa fa-2x fa-star-o" ng-repeat="score in getNumberToList(cafeSelected.ratingMusic.score) track by $index">{{score}}</i>
+    </p>
+    <br />
+    <p>
+      <i class="fa fa-2x fa-heart" aria-hidden="true"> &nbsp;&nbsp;데이트 &nbsp;&nbsp;&nbsp;&nbsp; :</i> <i class="fa fa-2x fa-star-o" ng-repeat="score in getNumberToList(cafeSelected.ratingLove.score) track by $index">{{score}}</i>
+    </p>
+    <br />
+    <p>
+      <i class="fa fa-2x fa-car" aria-hidden="true"> 주차공간  &nbsp;&nbsp;&nbsp;:</i> 	<i class="fa fa-2x fa-star-o" ng-repeat="score in getNumberToList(cafeSelected.ratingParking.score) track by $index">{{score}}</i>
+    </p>
+    <br />
+    <p>
+      <i class="fa fa-2x fa-briefcase" aria-hidden="true"> 공부/일  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</i> 	<i class="fa fa-2x fa-star-o" ng-repeat="score in getNumberToList(cafeSelected.ratingWork.score) track by $index">{{score}}</i>
+    </p>
+    <footer>
+      <ul class="actions">
+        <li>
+          <button ng-click="openRatingDetail('lg',cafeSelected)" class="button" style="box-shadow: inset 0 0 0 1px #e44c65; color: #e44c65 !important;">
+            더 자세하게 알아보기
+          </button>
+          </li>
+      </ul>
+    </footer>
+  </div>
+  <div ng-show="cafeSelected.ratingCoffee.description == 'NA'">
+    <h1>아직 리뷰가 없습니다</h1>
+  </div>
+</section>

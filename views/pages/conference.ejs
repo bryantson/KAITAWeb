@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<!--
+	KAITA 1st CONFERENCE
+	@author Bryant Son
+	@since  06/28/18
+-->
+<html>
+	<head>
+		<title>KAITA | 1st Conference</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="assets/css/mainConference.css" />
+
+	</head>
+	<body class="is-preload">
+		<section>
+			<article style="height: 300px;"></article>
+			<article style="font-size: 1.5em;">
+				<!-- Header -->
+				<header id="header">
+					<h1>KAITA 1<sup>ST</sup> Conference</h1>
+					<p>전 세계 1,000명이 넘는 한인 IT 네트워크 KAITA 의 첫번째 콘퍼런스로 여러분을 초대합니다. 
+					입장료는 무료이지만 저녁 식사비가 있을 수 있습니다. 참여하시는 분 숫자나 모여지는 후원비에 따라서 식사비가 무료로 제공될수도 있습니다.
+					자세한 내용은 RSVP 하신 이메일로 업데이트 드리겠습니다.
+					상황을 알려주시면 WAIVE 도 가능합니다. 
+					웹사이트를 자주 체크해주시길 바랍니다. 아래 이메일과 이름을 적어주셔서 RSVP 해주세요. 궁금하신 점은 
+					<a href="mailto: contact@kaita.org">contact@kaita.org</a> 로 연락해주시길 바랍니다. <br />
+					</p>
+				</header>
+
+			<!-- Signup Form -->
+				<form id="signup-form" method="post" action="/rsvpConference">
+					<input type="text" name="name" id="idName" placeholder="이름 (e.g. Michael Kim)" />
+					<input type="email" name="email" id="idEmail" placeholder="이메일 (e.g. mkim@gmail.com)" />
+					
+					<input type="submit" value="RSVP 하기" />
+				</form>
+				<div style="margin-top:10px;">
+						<input type="button" id="idProgramSchedule" style="background-color: #187a47; padding: 5px 5px 5px 5px; margin: 1.25em 0 0 0;" value="Program Schedule 보기" />
+						<input type="button" id="idSpeakerProfile" style="background-color: #961082; padding: 5px 5px 5px 5px; margin: 1.25em 0 0 0;" value="Speakers Profile 보기" />						
+						<input type="button" id="idDonate2KAITA" style="background-color: #ff0000; padding: 5px 5px 5px 5px; margin: 1.25em 0 0 0;" value="DONATION 하기" /> 
+						<input type="button" id="idKAITAWeb" style="background-color: #0066ff; padding: 5px 5px 5px 5px; margin: 1.25em 0 0 0;" value="KAITA 웹사이트 방문" />
+				</div>
+				<div id="idMessageSubmit"></div>
+
+				<p>
+						<h3>SURA KOREAN BISTRO</h3>
+						2240 ROYAL LANE #106
+						<br />
+						DALLAS, TX 75229
+					</p>
+					<p>
+						<h3>DATE &amp; TIME</h3>
+						<div style="margin-right: 20px;">
+								08/04/2018
+						</div>
+						<div>
+							6 P.M. CST
+						</div>
+							
+					</p>
+					
+			</article>
+
+		
+		 <!--
+			<article style="float: right; width: 40%; margin-left: 10%;">
+				<p>
+					<h3>SURA KOREAN BISTRO</h3>
+					2240 ROYAL LANE #106
+					<br />
+					DALLAS, TX 75229
+				</p>
+				<p>
+					<h3>DATE &amp; TIME</h3>
+					<span style="margin-right: 20px;">
+							08/04/2018
+					</span>
+					<span>
+						6 P.M. CST
+					</span>
+		
+					<div style="margin-top: 20px;">
+						<input type="button" id="idDonate2KAITA" style="background-color: #ff0000;" value="DONATION 하기" /> 
+						<input type="button" id="idKAITAWeb" style="background-color: #0066ff;" value="KAITA 웹사이트 방문" />
+					</div>
+				</article>
+			-->
+		</section>
+		<div id="dialogSpeakerProfile" title="SPEAKERS PROFILE">
+			<p>
+				<strong style="color: rgb(8, 14, 100);">Bryant Jimin Son</strong> is a Consultant at Red Hat, a technology company known for its Linux server and opensource contributions. 
+				He is also the President and Founder of Korean American IT Association group, known as KAITA. At work, he is working on 
+				building the technology for clients leveraging the Red Hat technology stacks like Openshift and full stack development using Java, Spring Framework,
+				AngularJS, Material design. Prior to joining Red Hat, Bryant was at Citi Group's Citi Cloud team, building the private Infrastructure as a Service (IaaS)
+				cloud platform servering 8,000+ teams across Citi departments. He also worked at American Airlines, IBM, and Home Depot Austin Technology Center. 
+				Bryant graduated with Bachelor of Sciences in Computer Science and Aerospace Engineering with minor concentration in Business at University of Texas at Austin.
+				He is an avid coder spending extra time on building side projects at cafes, and he travels every week on business. He also loves to work out daily and 
+				to grow KAITA.
+			</p>
+			<p>
+				<strong style="color: rgb(8, 14, 100);">Mingun Pak</strong> is going to be an upcoming Software Engineer at IBM, a technology company known for its machine learning platform called IBM Watson, 
+				a cloud platform called IBM Bluemix, and largest number of patents including ATM, airline ticket booking, and servers, in September 2018. 
+				Mingun is currently at a startup company called ObEN based in California, specializing computer vision and machine learning research. He has the expertises in Artificial Intelligence (AI),
+				machine learning, computer vision, and Natural Language Processing (NLP). Mingun graduated with Master of Computer Science at University of Southern California.
+				While he is not busy, he loves to listen to musics, to travel, to sing, and to drive.
+			</p>
+			<p>
+				<strong style="color: rgb(8, 14, 100);">Syngjin Shin</strong> is an Application Developer at Federal Reserve Bank of Dallas, which is one of 12 regional Reserve Banks that, 
+				along with the Board of Governors in Washington, D.C., make up the nation's central bank. Syngjin has expertises in full-stack development in Java, including Java,
+				Spring Framework, and user interface and user experiences design. Syngjin graduated with Bachelor of Science at University of Texas at Austin.
+				While he is not busy, he loves to be active in his church and to spend time with his best friends.
+			</p>
+		 </div>
+
+		 <div id="dialogProgramSchedule" title="PROGRAM SCHEDULE">
+			<p>
+				아래는 Program Schedule 입니다. 발표자 시간이나 스케쥴에 따라서 조금 늦어질수 있으며 순서가 조금 변경될수도 있습니다.
+				<h3 style="color:#0066ff">Program Schedule</h3>
+				<ul>
+					<li>6:00 p.m. - 6:30 p.m. : Registration, 네트워킹 &amp; 저녁식사</li>
+					<li>6:30 p.m. - 6:40 p.m. : SPEAKER 소개 by 모든 Featured Speakers</li>
+					<li>6:40 p.m. - 7:00 p.m. : KAITA 비전, 역사, 그리고 소개 by Bryant Son</li>
+					<li>7:00 p.m. - 7:10 p.m. : 휴식 시간</li>
+					<li>7:10 p.m. - 7:30 p.m. : User Interface &amp; User Experience 는 왜 중요한가 by Syngjin Shin</li>
+					<li>7:30 p.m. - 7:40 p.m. : 휴식 시간</li>
+					<li>7:40 p.m. - 8:00 p.m. : IT 직업과 인터뷰를 준비하는 방법 by Mingun Pak</li>
+					<li>8:00 p.m. - 8:05 p.m. : 휴식 시간</li>
+					<li>8:05 p.m. - 8:30 p.m. : 코딩이란 무언인가 그리고 IT 직업의 현재와 미래 by Bryant Son</li>
+					<li>8:30 p.m. - 8:50 p.m. : SPEAKERS Q &amp; A Panel</li>
+					<li>8:50 p.m. - 9:00 p.m. : Raffle 프라이즈 Give Away</li>
+					<li>9:00 p.m. ~  : Wrap Up</li>
+				</ul>
+			</p>
+		 </div>
+
+
+
+		<p style="clear: both;"></p>
+
+		<!-- Footer -->
+			<footer id="footer" style="margin-top:40px;">
+				<ul class="icons">
+					<li><a href="https://www.facebook.com/Korean-American-Information-Technology-Association-KAITA-1328351677274496" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="https://www.instagram.com/kaitaorg" target="_blank" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://www.linkedin.com/groups/12083774" target="_blank" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+					<li><a href="https://tinyurl.com/kaitaSlackNew" target="_blank" class="icon fa-slack"><span class="label">Slack</span></a></li>
+					<li><a href="https://www.twitter.com/kaitanews" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="mailto:contact@kaita.org" target="_blank" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; KAITA.</li><li>Credits: <a href="http://www.kaita.org" target="_blank">KAITA</a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/mainConference.js"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+			<script>
+			$( function() {
+			  $( "#dialogSpeakerProfile" ).dialog({
+				autoOpen: false,
+				width: 800
+			  });
+
+			  $( "#dialogProgramSchedule" ).dialog({
+				autoOpen: false,
+				width: 800
+			  });
+
+			  $( "#idSpeakerProfile" ).on( "click", function() {
+				$( "#dialogSpeakerProfile" ).dialog( "open" );
+			  });
+
+			  $( "#idProgramSchedule" ).on( "click", function() {
+				$( "#dialogProgramSchedule" ).dialog( "open" );
+			  });
+						
+			});
+
+			</script>
+
+	</body>
+</html>
