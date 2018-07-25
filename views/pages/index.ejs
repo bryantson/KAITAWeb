@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!--
+	미국 한인 아이티 연합 (KAITA.ORG)
+	@since 2017
+	@author Bryant Son, CEO and Founder of KAITA
+	Unlawful copyright of the contents and data of kaita.org are subjected to the lawsuit and action.
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108651325-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-108651325-1');
+		</script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="KAITA is the non-profit organization with a mission to connect Korean-Americans who are in IT fields or are interested in IT.">
+		<meta name="keywords" content="KAITA, Korean, 한인, Korean American IT Association, 한인 아이티 연합">
+		<meta name="author" content="Bryant Son">
+
+		<title>KAITA | 미국 한인 아이티 연합</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/assets/css/main.css" />
+
+		<link rel="stylesheet" href="/assets/css/cardStyle.css" />
+		<link rel="stylesheet" href="/assets/css/modalStyle.css" />
+		<link rel="stylesheet" href="/assets/css/colStyle.css" />
+		<link rel="stylesheet" href="/assets/css/labelStyle.css" />
+		<link rel="stylesheet" href="/assets/css/scrollBtnStyle.css" />
+
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+
+	</head>
+	<body class="index" ng-app="KAITAApp">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo">
+						<a href="/#/home">
+							KAITA <span>미국 한인 아이티 연합</span>
+						</a>
+					</h1>
+					<nav id="nav">
+						<ul>
+							<li class="current">
+								<a href="/#/home">
+									Welcome
+								</a>
+							</li>
+							<li class="submenu">
+								<a href="#">메뉴</a>
+								<ul>
+									<li>
+										<a href="/#/about">ABOUT KAITA</a>
+									</li>
+									<li>
+										<a href="/#/kakao">KAKAO OF KAITA</a>
+									</li>
+									<li>
+										<a href="/#/member">PEOPLE OF KAITA</a>
+									</li>
+									<li>
+										<a href="/#/event">EVENT OF KAITA</a>
+									</li>
+									<li>
+										<a href="/#/job">JOB OF KAITA</a>
+									</li>
+								</ul>
+
+							</li>
+							<li><a href="/#/login" class="button special">멤버 섹션</a></li>
+						</ul>
+					</nav>
+				</header>
+
+
+				<div ui-view autoscroll="true"></div>
+
+
+			<!-- Footer -->
+				<footer id="footer">
+
+					<ul class="icons">
+						<li><a href="https://open.kakao.com/o/gUbRe6x" target="_blank" class="icon circle fa-comments"><span class="label">Kakao</span></a></li>
+						<li><a href="https://www.facebook.com/Korean-American-Information-Technology-Association-KAITA-1328351677274496/notifications/" target="_blank" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/kaitaorg" target="_blank" class="icon circle fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://tinyurl.com/kaitaslack" target="_blank" class="icon circle fa-slack"><span class="label">Slack</span></a></li>
+						<li><a href="https://github.com/bryantson/KAITAWeb" target="_blank" class="icon circle fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://twitter.com/kaitanews" target="_blank" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
+					</ul>
+
+					<ul class="copyright">
+						<li>&copy; July 2017</li><li>Copyright: <a href="http://www.kaita.org">Korean American IT Assocation</a></li>
+					</ul>
+
+				</footer>
+
+		</div>
+
+		<button onclick="topFunction()" id="myBtn" title="Go to top">
+				<i class="fa fa-3x fa-arrow-up"></i>
+				<br />
+				위로
+		</button>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+			<script src="assets/js/libs/uiRouterJS/1.0.7/angular-ui-router.min.js"></script>
+			<script src="assets/js/libs/dataTableJS/dataTable.min.js"></script>
+
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+			<script src="assets/js/plainJavascript.js"></script>
+
+			<script src="assets/js/app/appKAITA.js"></script>
+
+			<script src="assets/js/app/services/appFilter.js"></script>
+			<script src="assets/js/app/services/appFactory.js"></script>
+
+			<script src="assets/js/app/controllers/eventCtrl/showEventsCtrl.js"></script>
+			<script src="assets/js/app/controllers/jobCtrl/showJobsCtrl.js"></script>
+			<script src="assets/js/app/controllers/memberCtrl/showMembersCtrl.js"></script>
+			<script src="assets/js/app/controllers/companyCtrl/showCompaniesCtrl.js"></script>
+			<script src="assets/js/app/controllers/companyCtrl/companyCtrl.js"></script>
+	</body>
+</html>

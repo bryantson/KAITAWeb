@@ -1,0 +1,20 @@
+<p>
+   <div ng-class="{panel, 'panel-success' : comment.like == true , 'panel-danger' : comment.like == false}" ng-repeat="comment in comments | reverse : 'timeCreated'">
+     <div class="panel-heading" style="font-size: 16px;">
+       <span ng-show="comment.like"><i class="fa fa-2x fa-thumbs-o-down"></i></span>
+       <span ng-hide="comment.like"><i class="fa fa-2x fa-thumbs-o-up"></i></span>
+       <span style="font-weight: bold;">{{comment.title}}</span>
+
+        - {{comment.author}}
+        <span style="float: right;"><strong>올린 시간:</strong> {{comment.timeCreated | date: "yyyy-MM-dd HH:mm"}}</span>
+     </div>
+     <div class="panel-body">
+       {{comment.body}}
+     </div>
+   </div>
+
+     <a href="" ng-click="loadFullComment()" class="round-button">
+       모든 코맨트 보기 <br />
+       <i class="fa fa-3x fa-comments-o" aria-hidden="true"></i>
+     </a>
+ </p>

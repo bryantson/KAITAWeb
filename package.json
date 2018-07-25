@@ -1,0 +1,36 @@
+{
+  "name": "KAITA Website",
+  "version": "0.2.6",
+  "description": "Korean American Information Technology (KAITA) 입니다",
+  "engines": {
+    "node": "6.11.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "angular-auth0": "^2.0.0",
+    "auth0-js": "^8.10.1",
+    "body-parser": "^1.18.2",
+    "cool-ascii-faces": "1.3.4",
+    "ejs": "2.5.6",
+    "express": "4.15.2",
+    "pg": "6.x"
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bryantson/KAITAWeb"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}

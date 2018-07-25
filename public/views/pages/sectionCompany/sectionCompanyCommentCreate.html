@@ -1,0 +1,23 @@
+<form ng-show="hasNoPreviousComment" ng-submit="submitForm()" >
+  <div class="form-group">
+    <label for="exampleInputEmail1" style="color: #000000;">타이틀</label>
+    <input type="text" ng-model="field.title" style="border: solid 1px rgba(0, 0, 0, 1.0);" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1" style="color: #000000;">코맨트</label>
+   <textarea ng-model="field.comment" class="form-control" rows="5" id="comment"></textarea>
+  </div>
+  <div class="form-group radio-toolbar">
+      <input type="radio" ng-model="field.like" id="idLike" name="nameVote" ng-value="true" />
+      <label for="idLike"> 추천 </label>
+
+      <input type="radio" ng-model="field.like"  id="idDislike" name="nameVote" ng-value="false" />
+      <label for="idDislike"> 반대 </label>
+  </div>
+  <button class="btn btn-info" ng-click="writeComment()" type="submit">
+    <i class="fa fa-2x fa-commenting-o" aria-hidden="true"> 코맨트 달기</i>
+  </button>
+</form>
+<div ng-hide="hasNoPreviousComment">
+  <h3>코맨트를 이전에 이미 다셨습니다 ^^</h3>
+</div>

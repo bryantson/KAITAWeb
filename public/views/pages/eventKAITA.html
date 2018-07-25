@@ -1,0 +1,110 @@
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+	  <div class="modal-header">
+	    <span class="close">&times;</span>
+	    <h2>{{selectedEvent.name}} ({{selectedEvent.category | convertEventToKorean }})- {{selectedEvent.event_date | parseDate}}</h2>
+	  </div>
+	  <div class="modal-body">
+			 <p>
+
+				 <table class="eventTable">
+
+				       <tr style="border: 1px solid black;">
+				         <td>이름 (Name)</td>
+				         <td>{{selectedEvent.name}}</td>
+				       </tr>
+							 <tr style="border: 1px solid black;">
+								 <td>분류 (Category)</td>
+								 <td>{{selectedEvent.category | convertEventToKorean }} ({{selectedEvent.category}})</td>
+							 </tr>
+							 <tr style="border: 1px solid black;">
+								<td>날짜 (Date)</td>
+								<td>{{selectedEvent.event_date | parseDate}}</td>
+							</tr>
+							<tr style="border: 1px solid black;">
+							 <td>시간 (Time)</td>
+							 <td>{{selectedEvent.event_time | parseTime}}</td>
+						 </tr>
+						 <tr style="border: 1px solid black;">
+ 						 <td>Location (장소)</td>
+ 						 <td>
+ 							 {{selectedEvent.event_place_name}}
+ 							 <br />
+ 							 {{selectedEvent.event_address}}
+ 							 <br />
+ 							 {{selectedEvent.event_city}}, {{selectedEvent.event_state}} {{selectedEvent.event_postcode}}
+							 <br />
+							 {{selectedEvent.event_country}}
+ 						 </td>
+ 					 </tr>
+						 <tr style="border: 1px solid black;">
+							<td>웹사이트 (Website)</td>
+							<td>
+								<a ng-href="{{selectedEvent.url_info}}" target="_blank">
+									  {{selectedEvent.url_info}}
+								</a>
+								</td>
+						</tr>
+				   </table>
+					 <p style="margin-top: 10px;">
+						 <h3>설명 (Description)</h3>
+							 {{selectedEvent.description}}
+					 </p>
+			 </p>
+
+		<!--
+	  <div class="modal-footer">
+	    <h3>Modal Footer</h3>
+	  </div>
+	-->
+		</div>
+	</div>
+</div>
+
+<article id="main">
+
+	<header class="special container">
+		<span class="icon fa-calendar"></span>
+		<h2>EVENT of <strong>KAITA</strong></h2>
+		<p>KAITA 를 통해서 정모나 다양한 이벤트에 같이 참여해요</p>
+	</header>
+
+	<!-- One -->
+		<section class="wrapper style4 container">
+
+			<!-- Content -->
+				<div class="content">
+					<section>
+						<header>
+							<h3>정모나 여러가지 이벤트를 찾아보세요</h3>
+						</header>
+
+						<table class="eventTable">
+						  <thead>
+						    <tr>
+						      <th>#</th>
+						      <th>이벤트 (Name)</th>
+									<th>장소 (Location)</th>
+						      <th>날짜 (Date)</th>
+						      <th>분류 (Category)</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr ng-repeat="event in events track by $index"  ng-click="openModalEvent(event)">
+						      <td>{{$index}}</td>
+									<td>{{event.name}} </td>
+						      <td>{{event.event_city}}, {{event.event_state}} {{event.event_country}}</td>
+						      <td>{{event.event_date | parseDate}} </td>
+						      <td>{{event.category | convertEventToKorean}} ({{event.category}})</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</section>
+				</div>
+
+		</section>
+
+</article>
