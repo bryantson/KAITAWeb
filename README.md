@@ -4,7 +4,7 @@ This is the source
 
 # Cloning Process
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
+Make sure you have [Node.js](http://nodejs.org/) and the Git installed.
 
 First, create a branch under "development" branch. The branch should be associated with Trello task name. Once ready, use the following command to clone the repo:
 
